@@ -1,0 +1,44 @@
+<head>
+  <title>play</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{#if currentUser}}
+      {{>loginButtons}}
+      {{>canvas}}
+      {{>menuOptions}}
+      {{>saveGame}}
+  {{else}}
+      {{>loginButtons}}
+  {{/if}}
+</body>
+
+
+<template name="canvas">
+  <canvas id = "myCanvas" width = "480" height = "320"> </canvas>
+  
+</template>
+<template name="saveGame">
+    <button name="saveGame">Save Game</button>
+</template>
+
+<template name="menuOptions">
+ <div id="menu">
+  <ul>
+    <li>
+     <a href="main.html" class="loadGame">New Game</a>
+    </li>
+    <li>
+      <a href="#" class="loadGame">Load Game</a>
+    </li>
+    <li>
+      <a href="scores.html" class="scores">Scores</a>
+    </li>
+  </ul>
+  </div>
+  
+</template>
+
+
+
